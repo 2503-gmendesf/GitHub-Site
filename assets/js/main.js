@@ -43,22 +43,28 @@ const btnNext = document.querySelector(".carousel-btn.next");
 let index = 0;
 
 function updateCarousel() {
-  const cardWidth = cards[0].offsetWidth + 20; // 20 = gap
+  if (!track || cards.length === 0) return;
+
+  const cardWidth = cards[0].offsetWidth;
   track.style.transform = `translateX(-${index * cardWidth}px)`;
 }
 
-btnNext.addEventListener("click", () => {
-  if (index < cards.length - 1) {
-    index++;
-    updateCarousel();
-  }
-});
+if (track && btnPrev && btnNext && cards.length > 0) {
+  btnNext.addEventListener("click", () => {
+    if (index < cards.length - 1) {
+      index++;
+      updateCarousel();
+    }
+  });
 
-btnPrev.addEventListener("click", () => {
-  if (index > 0) {
-    index--;
-    updateCarousel();
-  }
-});
+  btnPrev.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
+  });
 
-window.addEventListener("resize", updateCarousel);
+  window.addEventListener("resize", updateCarousel);
+
+  updateCarousel();
+}
