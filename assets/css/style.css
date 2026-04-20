@@ -557,4 +557,15 @@ h3 {
     height: 100px;
   }
 }
+
+.card h3 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.card h3 a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+  
 }
