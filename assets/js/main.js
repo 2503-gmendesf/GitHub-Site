@@ -34,3 +34,31 @@ if (sidebar && menuToggle) {
     });
   });
 }
+
+const track = document.querySelector(".carousel-track");
+const cards = document.querySelectorAll(".carousel-track .media-card");
+const btnPrev = document.querySelector(".carousel-btn.prev");
+const btnNext = document.querySelector(".carousel-btn.next");
+
+let index = 0;
+
+function updateCarousel() {
+  const cardWidth = cards[0].offsetWidth + 20; // 20 = gap
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+btnNext.addEventListener("click", () => {
+  if (index < cards.length - 1) {
+    index++;
+    updateCarousel();
+  }
+});
+
+btnPrev.addEventListener("click", () => {
+  if (index > 0) {
+    index--;
+    updateCarousel();
+  }
+});
+
+window.addEventListener("resize", updateCarousel);
