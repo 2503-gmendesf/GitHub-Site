@@ -1093,3 +1093,16 @@ h3 {
     display: none !important;
   }
 }
+
+@media (max-width: 768px) {
+  .media-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .media-card {
+    padding: 12px;
+    background: #07090d;
+  }
+}
