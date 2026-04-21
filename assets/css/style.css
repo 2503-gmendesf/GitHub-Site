@@ -402,6 +402,13 @@ h3 {
   display: block;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 /* ===========================
    CARD DE ATENÇÃO (AMARELO)
 =========================== */
