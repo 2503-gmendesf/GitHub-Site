@@ -891,6 +891,30 @@ h3 {
   flex-shrink: 0;
 }
 
+.equivalencia-img {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 18px;
+
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.equivalencia-img img {
+  width: 100%;
+  max-width: 900px; /* controla o tamanho máximo */
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 /* ===========================
    RESPONSIVO
 =========================== */
