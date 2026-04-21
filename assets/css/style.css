@@ -1102,3 +1102,23 @@ h3 {
     background: #07090d; /* evita fundo vazio feio */
   }
 }
+
+/* SAFARI FIX - esconder info sidebar no celular */
+@media screen and (max-width: 900px) {
+  aside.info-sidebar {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+}
+
+/* SAFARI FIX - bug de zoom em imagens com transform */
+.carousel-track-wrapper,
+.carousel-track,
+.media-card img {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
