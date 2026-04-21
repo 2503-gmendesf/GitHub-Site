@@ -461,6 +461,11 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.media-card img {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
 .media-card img,
 .graphic-panel img {
   width: 100%;
@@ -861,6 +866,7 @@ h3 {
   overflow: hidden;
   width: 100%;
   border-radius: 18px;
+  -webkit-transform: translateZ(0);
 }
 
 .carousel-track {
@@ -1003,12 +1009,11 @@ h3 {
 
 @media (max-width: 900px) {
   .home-layout {
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
   }
-
+  
   .info-sidebar {
-    position: static;
-    order: -1;
+      display: none;
   }
 
   .mobile-menu-toggle {
