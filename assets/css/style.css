@@ -915,6 +915,13 @@ h3 {
   object-fit: contain;
 }
 
+.equivalencia-img img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+}
+
 /* ===========================
    RESPONSIVO
 =========================== */
